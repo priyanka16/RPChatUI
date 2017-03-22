@@ -134,7 +134,9 @@ class FlexiTextView : UITextView, UITextViewDelegate {
     // MARK: Alignment
     
     func align() {
-        guard let end = self.selectedTextRange?.end, let caretRect: CGRect = self.caretRect(for:end) else { return }
+        guard let end = self.selectedTextRange?.end else { return }
+        
+            let caretRect: CGRect = self.caretRect(for:end)
         
         let topOfLine = caretRect.minY
         let bottomOfLine = caretRect.maxY
