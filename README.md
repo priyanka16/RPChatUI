@@ -22,7 +22,7 @@ pod "RPChatUI"
 
 ## Author
 
-priyanka16, pvernekar@deloitte.com
+priyanka16, priyanka.mvernekar@gmail.com
 
 ## License
 
