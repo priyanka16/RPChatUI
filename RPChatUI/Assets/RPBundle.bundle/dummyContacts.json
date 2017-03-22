@@ -1,0 +1,31 @@
+{
+	"dummyContacts": [{
+		"contactId": 1,
+		"contactName": "John Doe",
+		"contactOccupation": "iOS Developer",
+		"address": "Baker Street",
+		"distanceFromCurrentLocation": "5 miles",
+		"availableTimings": "9am - 6pm"
+	}, {
+		"contactId": 2,
+		"contactName": "Ray",
+		"contactOccupation": "iOS Developer",
+		"address": "Baker Street",
+		"distanceFromCurrentLocation": "5 miles",
+		"availableTimings": "9am - 6pm"
+	}, {
+		"contactId": 3,
+		"contactName": "Ty",
+		"contactOccupation": "iOS Developer",
+		"address": "Baker Street",
+		"distanceFromCurrentLocation": "5 miles",
+		"availableTimings": "9am - 6pm"
+	}, {
+		"contactId": 4,
+		"contactName": "Sarah",
+		"contactOccupation": "iOS Developer",
+		"address": "Baker Street",
+		"distanceFromCurrentLocation": "5 miles",
+		"availableTimings": "9am - 6pm"
+	}]
+}

@@ -1,0 +1,23 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - RPChatUI (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - RPChatUI (from `../`)
+
+EXTERNAL SOURCES:
+  RPChatUI:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  RPChatUI: 783bb34d2436335624656af066c503539f9fd3a8
+
+PODFILE CHECKSUM: 3c7f3c05871a4e16d3d88aef2a0e1eb56d7ca79a
+
+COCOAPODS: 1.2.1.beta.1

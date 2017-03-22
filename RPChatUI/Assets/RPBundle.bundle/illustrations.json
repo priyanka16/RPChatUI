@@ -1,0 +1,19 @@
+{
+  "illustrations" : [
+	{
+	  "demoImage" : "image1",
+	  "demoTitle" : "Tower of London",
+	  "demoDescription" : "Image used from google search results"
+  	},
+	{
+	  "demoImage" : "image2",
+	  "demoTitle" : "London stones",
+	  "demoDescription" : "Image used from google search results"
+  	},
+    {
+    "demoImage" : "image3",
+    "demoTitle" : "Buckingham Palace",
+    "demoDescription" : "Image used from google search results"
+    }
+	 ]
+}

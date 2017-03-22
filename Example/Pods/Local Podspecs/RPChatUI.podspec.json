@@ -1,0 +1,27 @@
+{
+  "name": "RPChatUI",
+  "version": "0.1.0",
+  "summary": "A short description of RPChatUI.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/priyanka16/RPChatUI",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "priyanka16": "pvernekar@deloitte.com"
+  },
+  "source": {
+    "git": "https://github.com/priyanka16/RPChatUI.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "RPChatUI/Classes/**/*",
+  "resource_bundles": {
+    "RPChatUI": [
+      "RPChatUI/Assets/*"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+framework module Pods_RPChatUI_Tests {
+  umbrella header "Pods-RPChatUI_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
