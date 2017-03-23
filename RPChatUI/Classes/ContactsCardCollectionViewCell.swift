@@ -50,15 +50,18 @@ class ContactsCardCollectionViewCell: UICollectionViewCell {
         self.selectButton.layer.borderWidth = 0.5
         self.selectButton.layer.borderColor = UIColor(red: 68 / 255.0, green: 65 / 255.0, blue: 235 / 255.0, alpha: 1.0).cgColor
         
-        if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-            if let image = UIImage(contentsOfFile: customBundle.path(forResource: "icConactBackground", ofType: "tiff")!) {
-                gradientImageView.image = image
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let imagePath: String = (customBundle.appending("/icConactBackground.tiff")) {
+                if let image = UIImage(contentsOfFile:imagePath) {
+                    gradientImageView.image = image
+                }
             }
         }
-        
-        if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-            if let image = UIImage(contentsOfFile: customBundle.path(forResource: "icContactImage", ofType: "tiff")!) {
-                contactImage.image = image
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let imagePath: String = (customBundle.appending("/icContactImage.tiff")) {
+                if let image = UIImage(contentsOfFile:imagePath) {
+                    contactImage.image = image
+                }
             }
         }
     }

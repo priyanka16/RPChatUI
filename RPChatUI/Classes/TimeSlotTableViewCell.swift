@@ -18,7 +18,6 @@ protocol TimeSlotTableViewCellDelegate : class {
 
 class TimeSlotTableViewCell: ChatMessageCell {
     
-    //var timeOptions: Dictionary<String, [String]>?
     var timeOptions = NSDictionary()
     fileprivate let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 9.0, right: 10.0)
     weak var delegate: TimeSlotTableViewCellDelegate?
@@ -92,7 +91,6 @@ extension TimeSlotTableViewCell: UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TimeSlotTubeTableViewCell", for: indexPath) as! TimeSlotTubeTableViewCell
-            //for timeSlotForDay in timeOptions! {
             
             let weekdayKey = dayOfWeekKeyString(dayIndex: indexPath.row).lowercased()
             if let timeSlots = timeOptions.object(forKey: weekdayKey) as? [String] {

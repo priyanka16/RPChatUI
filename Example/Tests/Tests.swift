@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import RPChatUI
+//import RPChatUI
 
 class Tests: XCTestCase {
     

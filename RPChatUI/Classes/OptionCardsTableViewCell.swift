@@ -33,17 +33,19 @@ class OptionCardsTableViewCell : ChatMessageCell {
         collectionViewTopConstraint.constant = collectionViewYconstant //20 is for padding including the message bubble padding + spacing for the collection view
         
         //Set up dummy data
-        let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!)
-        let filepath = customBundle?.path(forResource: "cards", ofType: "json")
-        var filedata = NSData()
-        do {
-            try filedata = NSData(contentsOfFile: filepath!, options:NSData.ReadingOptions.mappedIfSafe)
-            let parsedData = try JSONSerialization.jsonObject(with: filedata as Data, options: []) as! Dictionary <String, AnyObject>
-            if let contacts = parsedData["cards"] as? [Dictionary<String, AnyObject>] {
-                setupDataSource(listOptions: contacts)
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let filepath: String = (customBundle.appending("/cards.json")) {
+                var filedata = NSData()
+                do {
+                    try filedata = NSData(contentsOfFile: filepath, options:NSData.ReadingOptions.mappedIfSafe)
+                    let parsedData = try JSONSerialization.jsonObject(with: filedata as Data, options: []) as! Dictionary <String, AnyObject>
+                    if let contacts = parsedData["cards"] as? [Dictionary<String, AnyObject>] {
+                        setupDataSource(listOptions: contacts)
+                    }
+                } catch {
+                    abort()
+                }
             }
-        } catch {
-            abort()
         }
     }
     

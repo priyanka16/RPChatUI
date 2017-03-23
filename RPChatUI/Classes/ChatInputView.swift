@@ -93,14 +93,14 @@ class ChatInputView : UIView, FlexiTextViewDelegate {
     }
     
     func setupSendButton() {
-        //self.sendButton.setImage(UIImage(named:"mic"), for: .normal)
         
-        if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-            if let micImage = UIImage(contentsOfFile: customBundle.path(forResource: "mic", ofType: "tiff")!) {
-                self.sendButton.setImage(micImage, for: .normal)
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let imagePath: String = (customBundle.appending("/mic.tiff")) {
+                if let micImage = UIImage(contentsOfFile:imagePath) {
+                    self.sendButton.setImage(micImage, for: .normal)
+                }
             }
         }
-        
         self.sendButton.tag = 100
         self.sendButton.addTarget(self, action: #selector(sendButtonPressed(sender:)), for: .touchUpInside)
         self.sendButton.bounds = CGRect(x: 0, y: 0, width: 40, height: 1)
@@ -108,24 +108,24 @@ class ChatInputView : UIView, FlexiTextViewDelegate {
     }
     
     func setupAttachmentButton() {
-        //self.attachmentButton.setImage(UIImage(named:"icAttachment"), for: .normal)
-        if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-            if let image = UIImage(contentsOfFile: customBundle.path(forResource: "icAttachment", ofType: "tiff")!) {
-                self.attachmentButton.setImage(image, for: .normal)
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let imagePath: String = (customBundle.appending("/icAttachment.tiff")) {
+                if let micImage = UIImage(contentsOfFile:imagePath) {
+                    self.attachmentButton.setImage(micImage, for: .normal)
+                }
             }
         }
-        
         self.attachmentButton.addTarget(self, action: #selector(attachmentButtonPressed(sender:)), for: .touchUpInside)
         self.attachmentButton.bounds = CGRect(x: 0, y: 0, width: 40, height: 1)
         self.addSubview(attachmentButton)
     }
     
     func setupStopListeningButton() {
-        
-        //self.stopListeningButton.setImage(UIImage(named:"icClose"), for: .normal)
-        if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-            if let image = UIImage(contentsOfFile: customBundle.path(forResource: "icClose", ofType: "tiff")!) {
-                self.stopListeningButton.setImage(image, for: .normal)
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let imagePath: String = (customBundle.appending("/icClose.tiff")) {
+                if let image = UIImage(contentsOfFile:imagePath) {
+                    self.stopListeningButton.setImage(image, for: .normal)
+                }
             }
         }
         self.stopListeningButton.addTarget(self, action: #selector(closeButtonPressed(sender:)), for: .touchUpInside)
@@ -137,10 +137,11 @@ class ChatInputView : UIView, FlexiTextViewDelegate {
     func setupListening() {
         
         self.attachmentButton.removeFromSuperview()
-        //self.sendButton.setImage(UIImage(named:"wave"), for: .normal)
-        if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-            if let image = UIImage(contentsOfFile: customBundle.path(forResource: "sound-wave", ofType: "tiff")!) {
-                self.sendButton.setImage(image, for: .normal)
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let imagePath: String = (customBundle.appending("/sound-wave.tiff")) {
+                if let image = UIImage(contentsOfFile:imagePath) {
+                    self.sendButton.setImage(image, for: .normal)
+                }
             }
         }
         self.sendButton.tag = 1010
@@ -167,7 +168,6 @@ class ChatInputView : UIView, FlexiTextViewDelegate {
         self.sendButton.removeConstraints(self.sendButton.constraints)
         
         let rightConstraint = NSLayoutConstraint(item: self, attribute: .right, relatedBy: .equal, toItem: self.sendButton, attribute: .right, multiplier: 1.0, constant: textViewInsets.right)
-        //let bottomConstraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: self.sendButton, attribute: .bottom, multiplier: 1.0, constant: textViewInsets.bottom)
         let bottomConstraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: self.sendButton, attribute: .bottom, multiplier: 1.0, constant: textViewInsets.bottom)
         let widthConstraint = NSLayoutConstraint(item: self.sendButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 40)
         sendButtonHeightConstraint = NSLayoutConstraint(item: self.sendButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 40)
@@ -261,18 +261,21 @@ class ChatInputView : UIView, FlexiTextViewDelegate {
     
     func stretchyTextViewDidChange(chatInput: FlexiTextView) {
         if (chatInput.text.characters.count > 0) {
-            //self.sendButton.setImage(UIImage(named:"icSend"), for: .normal)
-            if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-                if let image = UIImage(contentsOfFile: customBundle.path(forResource: "icSend", ofType: "tiff")!) {
-                    self.sendButton.setImage(image, for: .normal)
+            if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+                if let imagePath: String = (customBundle.appending("/icSend.tiff")) {
+                    if let image = UIImage(contentsOfFile:imagePath) {
+                        self.sendButton.setImage(image, for: .normal)
+                    }
                 }
             }
+            
             self.sendButton.tag = 500
         } else {
-            //self.sendButton.setImage(UIImage(named:"mic"), for: .normal)
-            if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-                if let image = UIImage(contentsOfFile: customBundle.path(forResource: "mic", ofType: "tiff")!) {
-                    self.sendButton.setImage(image, for: .normal)
+            if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+                if let imagePath: String = (customBundle.appending("/mic.tiff")) {
+                    if let image = UIImage(contentsOfFile:imagePath) {
+                        self.sendButton.setImage(image, for: .normal)
+                    }
                 }
             }
             self.sendButton.tag = 100
@@ -296,10 +299,11 @@ class ChatInputView : UIView, FlexiTextViewDelegate {
                 }
                 self.textView.text = ""
                 self.textView.placeholder = NSLocalizedString("Type Something...", comment: "")
-                //self.sendButton.setImage(UIImage(named:"mic"), for: .normal)
-                if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-                    if let image = UIImage(contentsOfFile: customBundle.path(forResource: "mic", ofType: "tiff")!) {
-                        self.sendButton.setImage(image, for: .normal)
+                if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+                    if let imagePath: String = (customBundle.appending("/mic.tiff")) {
+                        if let image = UIImage(contentsOfFile:imagePath) {
+                            self.sendButton.setImage(image, for: .normal)
+                        }
                     }
                 }
                 self.sendButton.tag = 100

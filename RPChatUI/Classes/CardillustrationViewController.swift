@@ -16,21 +16,22 @@ class CardillustrationViewController: UIViewController{
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib
-        let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!)
-        let filepath = customBundle?.path(forResource: "illustrations", ofType: "json")
-        var filedata = NSData()
-        do {
-            try filedata = NSData(contentsOfFile: filepath!, options:NSData.ReadingOptions.mappedIfSafe)
-            let parsedData = try JSONSerialization.jsonObject(with: filedata as Data, options: []) as! Dictionary <String, AnyObject>
-            if let imageIllustrations = parsedData["illustrations"] as? [Dictionary<String, String>] {
-                for singleIllustration in imageIllustrations {
-                    illustrations.append(singleIllustration)
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let filepath: String = (customBundle.appending("/illustrations.json")) {
+                var filedata = NSData()
+                do {
+                    try filedata = NSData(contentsOfFile: filepath, options:NSData.ReadingOptions.mappedIfSafe)
+                    let parsedData = try JSONSerialization.jsonObject(with: filedata as Data, options: []) as! Dictionary <String, AnyObject>
+                    if let imageIllustrations = parsedData["illustrations"] as? [Dictionary<String, String>] {
+                        for singleIllustration in imageIllustrations {
+                            illustrations.append(singleIllustration)
+                        }
+                    }
+                } catch {
+                    abort()
                 }
             }
-        } catch {
-            abort()
         }
-
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

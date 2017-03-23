@@ -112,11 +112,6 @@ class FlexiTextView : UITextView, UITextViewDelegate {
     // MARK: Sizing
     
     func resize() {
-        /*if (self.text.characters.count == 0) {
-            bounds.size.height = self.targetHeight() + 10
-        } else {
-            bounds.size.height = self.targetHeight()
-        }*/
         bounds.size.height = self.targetHeight() + 10
         placeholderLabel.frame = self.textInputView.frame
         flexiTextViewDelegate?.stretchyTextViewDidChangeSize(chatInput: self)

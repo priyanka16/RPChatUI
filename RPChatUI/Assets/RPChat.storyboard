@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MT3-4d-TqI">
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="2096" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +24,7 @@
         <!--Chatter-->
         <scene sceneID="zWv-uy-mOB">
             <objects>
-                <viewController id="6UX-e4-8QC" userLabel="Chatter" customClass="ChatViewController" customModule="RPChatter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="6UX-e4-8QC" userLabel="Chatter" customClass="ChatViewController" customModule="RPChatUI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yjw-hz-5gK"/>
                         <viewControllerLayoutGuide type="bottom" id="CwO-Af-4Cs"/>
@@ -38,7 +38,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimeSlotTableViewCell" id="DnJ-Yl-Wb3" customClass="TimeSlotTableViewCell" customModule="RPChatter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimeSlotTableViewCell" id="DnJ-Yl-Wb3" customClass="TimeSlotTableViewCell" customModule="RPChatUI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DnJ-Yl-Wb3" id="Xch-FQ-eDJ">
@@ -69,7 +69,7 @@
                                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rR6-yq-El2">
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <prototypes>
-                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimeSlotTubeTableViewCell" id="P33-8B-IBb" customClass="TimeSlotTubeTableViewCell" customModule="RPChatter" customModuleProvider="target">
+                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimeSlotTubeTableViewCell" id="P33-8B-IBb" customClass="TimeSlotTubeTableViewCell" customModule="RPChatUI" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="28" width="275" height="50"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P33-8B-IBb" id="X2m-5A-h5m">
@@ -85,7 +85,7 @@
                                                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                                 </collectionViewFlowLayout>
                                                                                 <cells>
-                                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TimeTabletCollectionViewCell" id="DQf-0r-J99" customClass="TimeTabletCollectionViewCell" customModule="RPChatter" customModuleProvider="target">
+                                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TimeTabletCollectionViewCell" id="DQf-0r-J99" customClass="TimeTabletCollectionViewCell" customModule="RPChatUI" customModuleProvider="target">
                                                                                         <rect key="frame" x="0.0" y="5" width="150" height="40"/>
                                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -164,7 +164,7 @@
                                             <outlet property="timeslotTableView" destination="rR6-yq-El2" id="pRZ-f2-8zy"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactCardTableViewCell" id="FCW-G4-6Dc" customClass="ContactCardTableViewCell" customModule="RPChatter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactCardTableViewCell" id="FCW-G4-6Dc" customClass="ContactCardTableViewCell" customModule="RPChatUI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="342" width="375" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FCW-G4-6Dc" id="TGd-Nx-cli">
@@ -180,7 +180,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ContactsCardCollectionViewCell" id="pVu-tf-KHD" customClass="ContactsCardCollectionViewCell" customModule="RPChatter" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ContactsCardCollectionViewCell" id="pVu-tf-KHD" customClass="ContactsCardCollectionViewCell" customModule="RPChatUI" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="185" height="230"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -396,7 +396,7 @@
                                             <outlet property="collectionViewTopConstraint" destination="I14-8O-nQ6" id="bl7-I5-wEx"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCardsTableViewCell" id="D05-mn-Bj5" customClass="OptionCardsTableViewCell" customModule="RPChatter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionCardsTableViewCell" id="D05-mn-Bj5" customClass="OptionCardsTableViewCell" customModule="RPChatUI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="592" width="375" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D05-mn-Bj5" id="rpy-26-oOW">
@@ -412,7 +412,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OptionCardCollectionViewCell" id="NvJ-xY-IEF" customClass="OptionCardCollectionViewCell" customModule="RPChatter" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OptionCardCollectionViewCell" id="NvJ-xY-IEF" customClass="OptionCardCollectionViewCell" customModule="RPChatUI" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="43" width="200" height="145"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -497,6 +497,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6UX-e4-8QC" id="S6w-Pd-Ynb"/>
+                                    <outlet property="delegate" destination="6UX-e4-8QC" id="gON-0i-Fw6"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -515,9 +519,9 @@
         <!--Navigation Controller-->
         <scene sceneID="Gq3-2b-P0z">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MT3-4d-TqI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RPChatStoryboard" automaticallyAdjustsScrollViewInsets="NO" id="MT3-4d-TqI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3uq-LJ-Uaz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3uq-LJ-Uaz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -533,7 +537,7 @@
         <!--Contact Details View Controller-->
         <scene sceneID="Y3d-4v-EK1">
             <objects>
-                <viewController id="E7C-Nu-qUP" customClass="ContactDetailsViewController" customModule="RPChatter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="E7C-Nu-qUP" customClass="ContactDetailsViewController" customModule="RPChatUI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g9a-fW-xuV"/>
                         <viewControllerLayoutGuide type="bottom" id="i19-Pp-MpK"/>
@@ -555,7 +559,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oUN-p2-jPl">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactDetailTableViewCell" id="l0M-oG-Wpj" customClass="ContactDetailTableViewCell" customModule="RPChatter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactDetailTableViewCell" id="l0M-oG-Wpj" customClass="ContactDetailTableViewCell" customModule="RPChatUI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l0M-oG-Wpj" id="ttk-ai-Wrk">
@@ -581,7 +585,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactProfileTableViewCell" id="wcg-v9-CFV" customClass="ContactProfileTableViewCell" customModule="RPChatter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactProfileTableViewCell" id="wcg-v9-CFV" customClass="ContactProfileTableViewCell" customModule="RPChatUI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="178" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wcg-v9-CFV" id="Yjm-i1-Nad">
@@ -676,7 +680,7 @@
                                             <outlet property="contactNameLabel" destination="Yjc-Au-NHP" id="AKD-tY-xYs"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactServicesTableViewCell" id="TOI-HX-73T" customClass="ContactServicesTableViewCell" customModule="RPChatter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactServicesTableViewCell" id="TOI-HX-73T" customClass="ContactServicesTableViewCell" customModule="RPChatUI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="328" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TOI-HX-73T" id="RXw-my-tbh">
@@ -816,7 +820,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactAddressTableViewCell" id="4IQ-xl-28q" customClass="ContactAddressTableViewCell" customModule="RPChatter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactAddressTableViewCell" id="4IQ-xl-28q" customClass="ContactAddressTableViewCell" customModule="RPChatUI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="478" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4IQ-xl-28q" id="zDD-s1-ayB">
@@ -872,7 +876,7 @@
         <!--Cardillustration View Controller-->
         <scene sceneID="PtN-eF-S6Z">
             <objects>
-                <viewController storyboardIdentifier="CardillustrationViewController" id="fbo-0P-y10" customClass="CardillustrationViewController" customModule="RPChatter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardillustrationViewController" id="fbo-0P-y10" customClass="CardillustrationViewController" customModule="RPChatUI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UO9-wu-RRd"/>
                         <viewControllerLayoutGuide type="bottom" id="lib-ea-PSP"/>
@@ -884,7 +888,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="250" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eVq-yu-4hd">
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CardillustrationTableViewCell" id="tOx-6v-AUW" customClass="CardillustrationTableViewCell" customModule="RPChatter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CardillustrationTableViewCell" id="tOx-6v-AUW" customClass="CardillustrationTableViewCell" customModule="RPChatUI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="335" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tOx-6v-AUW" id="nMg-aH-rsN">

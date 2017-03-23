@@ -65,11 +65,14 @@ class ChatMessageCell : UITableViewCell {
         let chatbotIcon = UIImageView()
         chatbotIcon.bounds.size = CGSize(width: 32, height: 32)
         chatbotIcon.center = CGPoint(x:(self.minimumHeight + 5)/2, y:(self.minimumHeight + 5)/2)
-        if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-            if let image = UIImage(contentsOfFile: customBundle.path(forResource: "icChatbot", ofType: "tiff")!) {
-                chatbotIcon.image = image
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let imagePath: String = (customBundle.appending("/icChatbot.tiff")) {
+                if let image = UIImage(contentsOfFile:imagePath) {
+                    chatbotIcon.image = image
+                }
             }
         }
+        
         chatbotIcon.contentMode = .scaleAspectFit
         opponentImageContainer.addSubview(chatbotIcon)
         self.contentView.addSubview(opponentImageContainer)
@@ -87,10 +90,11 @@ class ChatMessageCell : UITableViewCell {
         let textViewSingleLineCenter = self.textView.textContainerInset.top + (Appearance.font.lineHeight / 2.0)
         userImageView.center = CGPoint(x: self.bounds.width - halfWidth - self.padding, y: textViewSingleLineCenter)
         userImageView.backgroundColor = UIColor.lightText
-        //userImageView.image = UIImage(named:"icUser_messageSent")
-        if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-            if let image = UIImage(contentsOfFile: customBundle.path(forResource: "icUser_messageSent", ofType: "tiff")!) {
-                userImageView.image = image
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let imagePath: String = (customBundle.appending("/icUser_messageSent.tiff")) {
+                if let image = UIImage(contentsOfFile:imagePath) {
+                    userImageView.image = image
+                }
             }
         }
         userImageView.layer.rasterizationScale = UIScreen.main.scale
@@ -116,10 +120,12 @@ class ChatMessageCell : UITableViewCell {
         symbolImageView.layer.shouldRasterize = true
         symbolImageView.layer.cornerRadius = halfHeight
         symbolImageView.layer.masksToBounds = true
-        //symbolImageView.image = UIImage(named:"icMic")
-        if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-            if let image = UIImage(contentsOfFile: customBundle.path(forResource: "mic", ofType: "tiff")!) {
-                symbolImageView.image = image
+        
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let imagePath: String = (customBundle.appending("/mic.tiff")) {
+                if let image = UIImage(contentsOfFile:imagePath) {
+                    symbolImageView.image = image
+                }
             }
         }
         self.messageBubbleView.addSubview(symbolImageView)

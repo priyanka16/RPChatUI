@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ChatViewController: UIViewController {
+open class ChatViewController: UIViewController {
     
     var messages: [ChatMessage] = []
     var opponentImage: UIImage?
@@ -23,26 +23,27 @@ public class ChatViewController: UIViewController {
     fileprivate var googleSearchString: String?
     fileprivate var selectedContactObj: Dictionary<String, AnyObject>?
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib
+        
         self.setUpChatInterface()
         
         //Show user a welcome message
-        let newMessage = ChatMessage(content: "Hey there! I'm Po, your personal  assistant", sentBy: .Bot, messageType: .list, listOptions:nil)
+        let newMessage = ChatMessage(content: "Hey there! I'm Po, your personal  assistant", sentBy: .Bot, messageType: .text, listOptions:nil)
         addNewMessage(message: newMessage)
     }
-    override public func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.listenForNotifications()
     }
     
-    override public func viewDidAppear(_ animated: Bool) {
+    override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.scrollToBottom()
     }
     
-    override public func viewWillDisappear(_ animated: Bool) {
+    override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.unregisterObservers()
     }
@@ -61,7 +62,7 @@ public class ChatViewController: UIViewController {
         
     }
     
-    override public func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -74,10 +75,12 @@ public class ChatViewController: UIViewController {
     }
     
     private func setupTableView() {
-        //tableView.backgroundView = UIImageView(image: UIImage(named:"chatBackground"))
-        if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-            if let image = UIImage(contentsOfFile: customBundle.path(forResource: "chatBackground", ofType: "tiff")!) {
-                tableView.backgroundView = UIImageView(image: image)
+        
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let imagePath: String = (customBundle.appending("/chatBackground.tiff")) {
+                if let image = UIImage(contentsOfFile:imagePath) {
+                    tableView.backgroundView = UIImageView(image: image)
+                }
             }
         }
         tableView.allowsSelection = false
@@ -116,7 +119,7 @@ public class ChatViewController: UIViewController {
         let rightConstraint = NSLayoutConstraint(item: tableView, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: 0.0)
         let topConstraint = NSLayoutConstraint(item: tableView, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 0.0)
         let bottomConstraint = NSLayoutConstraint(item: tableView, attribute: .bottom, relatedBy: .equal, toItem: chatInput, attribute: .top, multiplier: 1.0, constant: 0)
-        return [rightConstraint, leftConstraint, topConstraint, bottomConstraint]//, rightConstraint, bottomConstraint]
+        return [rightConstraint, leftConstraint, topConstraint, bottomConstraint]
     }
     
     private func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -185,12 +188,12 @@ extension ChatViewController: UITableViewDataSource {
         return 1;
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.messages.count;
     }
     
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let message = self.messages[indexPath.row]
         
@@ -240,7 +243,7 @@ extension ChatViewController: UITableViewDataSource {
 // MARK: UITableViewDelegate
 extension ChatViewController: UITableViewDelegate {
     
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    open func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         var cellHeight: CGFloat = 0.0
         let message = self.messages[indexPath.row]
@@ -359,7 +362,7 @@ extension ChatViewController: ContactCardTableViewCellDelegate {
         self.performSegue(withIdentifier: "showContactDetailsViewController", sender: self)
     }
     
-    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override open func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "showContactDetailsViewController") {
             

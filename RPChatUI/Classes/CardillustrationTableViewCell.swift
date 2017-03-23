@@ -34,21 +34,15 @@ class CardillustrationTableViewCell : UITableViewCell {
         self.demonstrationImageView.layer.borderColor = UIColor(red: 242 / 255.0, green: 242 / 255.0, blue: 242 / 255.0, alpha: 1.0).cgColor
         self.demonstrationImageView.layer.masksToBounds = true
         if let demoImage = cardObject["demoImage"] {
-            
-            
-            if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-                if let demoImageFile = UIImage(contentsOfFile: customBundle.path(forResource: demoImage, ofType: "jpg")!) {
-                    self.demonstrationImageView.image = demoImageFile
+
+            if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+                if let imagePath: String = (customBundle.appending("/\(demoImage).jpg")) {
+                    if let demoImageFile = UIImage(contentsOfFile:imagePath) {
+                        self.demonstrationImageView.image = demoImageFile
+                    }
                 }
             }
-
-            
-            
-//            if let demoImageFile = UIImage(named: demoImage + ".jpg") {
-//                self.demonstrationImageView.image = demoImageFile
-//            }
         }
-        
         if let demoTitle = cardObject["demoTitle"] {
             self.demonstrationTitle.text = demoTitle
         }

@@ -34,10 +34,12 @@ class OptionCardCollectionViewCell: UICollectionViewCell {
         self.gradientImageView.layer.borderWidth = 1.0
         self.gradientImageView.layer.borderColor = UIColor(red: 242 / 255.0, green: 242 / 255.0, blue: 242 / 255.0, alpha: 1.0).cgColor
         self.gradientImageView.layer.masksToBounds = true
-        //self.gradientImageView.image = UIImage(named: "gradient")
-        if let customBundle = Bundle(path: Bundle.main.path(forResource: "RPBundle", ofType: "bundle")!) {
-            if let image = UIImage(contentsOfFile: customBundle.path(forResource: "gradient", ofType: "tiff")!) {
-                self.gradientImageView.image = image
+        
+        if let customBundle = Bundle.init(identifier: "org.cocoapods.RPChatUI")?.path(forResource: "RPBundle", ofType: "bundle") {
+            if let imagePath: String = (customBundle.appending("/gradient.tiff")) {
+                if let image = UIImage(contentsOfFile:imagePath) {
+                    self.gradientImageView.image = image
+                }
             }
         }
     }

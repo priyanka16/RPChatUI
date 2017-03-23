@@ -73,8 +73,6 @@ class NoddyTableViewCell: ChatMessageCell {
         
         let topConstraint = NSLayoutConstraint(item: self.textView, attribute: .bottom, relatedBy: .greaterThanOrEqual, toItem: self.yesButton, attribute: .top, multiplier: 1.0, constant: -5)
         let bottomConstraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: self.yesButton, attribute: .bottom, multiplier: 1.0, constant:15)
-        
-        //let bottomConstraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: self.yesButton, attribute: .bottom, multiplier: 1.0, constant: 10)
         let widthConstraint = NSLayoutConstraint(item: self.yesButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 50)
         let hieghtConstraint = NSLayoutConstraint(item: self.yesButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 30)
         self.addConstraints([hieghtConstraint, widthConstraint, leadingConstraint, bottomConstraint, topConstraint])
@@ -110,9 +108,6 @@ class NoddyTableViewCell: ChatMessageCell {
             yesButton.backgroundColor = UIColor.white
             self.yesButton.setTitleColor(UIColor(red: 69 / 255.0, green: 65 / 255.0, blue: 234 / 255.0, alpha: 1.0), for: .normal)
         }
-
-        
-        
     }
     
     func noButtonPressed(sender: UIButton) {
