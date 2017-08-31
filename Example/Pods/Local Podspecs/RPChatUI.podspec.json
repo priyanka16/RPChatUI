@@ -1,6 +1,6 @@
 {
   "name": "RPChatUI",
-  "version": "0.1.0",
+  "version": "0.1.1.2",
   "summary": "An exquisite library for chatting interface with fancy components.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/priyanka16/RPChatUI",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/priyanka16/RPChatUI.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1.2"
   },
   "platforms": {
     "ios": "10.0"
@@ -23,5 +23,6 @@
     "RPChatUI": [
       "RPChatUI/Assets/*.{storyboard,bundle}"
     ]
-  }
+  },
+  "resources": "RPChatUI/Assets/*.{storyboard,bundle}"
 }
