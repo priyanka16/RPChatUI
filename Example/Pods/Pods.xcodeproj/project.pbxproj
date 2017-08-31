@@ -13,11 +13,13 @@
 		17DF5802125D102C610032943F1A9B40 /* FlexiTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24506DEF08ABC2BF46B5CF57AD9330F /* FlexiTextView.swift */; };
 		18FE992D8174E9732095B6C2F858E6AA /* ContactsCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282117E23FCD9CBFEA043FAA83A8A913 /* ContactsCardCollectionViewCell.swift */; };
 		397A9875E2161A0B60F12D5920ACB70D /* OptionCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068077EC87547A53222DC4A8E95A5D62 /* OptionCardCollectionViewCell.swift */; };
+		47CD9775EF7EA16683826747F408D6B9 /* RPChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AB8972A00D7B229086301F0D1A3A45 /* RPChat.storyboard */; };
 		57EFD97DA29C6DFDB3A81940391EDE7E /* ContactServicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4790855759D6DBBD6FB22B5CBA9F6943 /* ContactServicesTableViewCell.swift */; };
 		5851304196528D8B0A252C465A46BC78 /* ContactDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8FAEF226941898CD68B67D354CBC75 /* ContactDetailTableViewCell.swift */; };
 		5918421C211CB0062600BE6B54E56D2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		5C77A7771D1CE64A64EEB3A78E4AEBD2 /* CardillustrationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EB86795B9B969CD61A871275C2E710 /* CardillustrationTableViewCell.swift */; };
 		6DAD95DA2B6387467DD935ACFFC8F641 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC27AFDE73ABD92AC22E9E305B675F71 /* ChatViewController.swift */; };
+		6F47427E0635A04AF6593373545D139C /* RPBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E6B2DA0A6FC973BDDA47C9542A711F7F /* RPBundle.bundle */; };
 		821696A8A654EA5A6FCE9A50E718CBB7 /* Pods-RPChatUI_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9EB63F7B3E957F3B617B980E8ABDB3 /* Pods-RPChatUI_Tests-dummy.m */; };
 		8237B54047B3CCB4B842FB7FAAE12D65 /* TimeTabletCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1289D32A2E34B0005105A5E4E87E4 /* TimeTabletCollectionViewCell.swift */; };
 		8435A5BC665C1E8BCF58041BDBCA1E3E /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C7C8EB478FB05A725E0552CA0D5CA4 /* ContactDetailsViewController.swift */; };
@@ -28,10 +30,10 @@
 		95D9A981888F5E5C775A12CFD946DA47 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B8785BB7B41DD2108143075C70F671 /* ChatMessageCell.swift */; };
 		99BEE62388D65EEC3049010BAE1B2803 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A59C3A78ED66A4D7C650AD9675735 /* ChatMessage.swift */; };
 		A23324C3C416C626D1714AC609EC9963 /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB047C5B1B917AFE17F053766CB1CF7 /* ChatInputView.swift */; };
-		AE0E083C47AA93C0A2645134211260A2 /* RPChatUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B59B09CBF4A33AF249F16A0CF648014 /* RPChatUI.bundle */; };
 		B26EFC35FF9F570B345A19534AE12FA3 /* OptionCardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DDC7F5E6CB93A65CFC63848D5F2E2 /* OptionCardsTableViewCell.swift */; };
 		B82154DD2DDE1A50AB7C82ED138DDD7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		BAF954E8BF043DF1859FF4DE6223992C /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A5E24E80B790EA8CCD17C37912CAD1 /* ReplaceMe.swift */; };
+		BF4E6B868156CBD97F0185276F686E71 /* RPChatUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B59B09CBF4A33AF249F16A0CF648014 /* RPChatUI.bundle */; };
 		C60025DB4EFEF05C20B407F9E7A63F2E /* RPBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E6B2DA0A6FC973BDDA47C9542A711F7F /* RPBundle.bundle */; };
 		C85C016A205D75F235C92626C8E1C88E /* RPChatUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0085DB7E1EE31B29923ABD4E07B6A44B /* RPChatUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D760555D309D742DD46C7F6378788770 /* NoddyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F2C6C7718C485325BEC9E64803108 /* NoddyTableViewCell.swift */; };
@@ -78,12 +80,12 @@
 		3175C558405C0BF2F6A9F65BAE7CAF8C /* CardillustrationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CardillustrationViewController.swift; sourceTree = "<group>"; };
 		3958127EA688E8C1B7B75A9D5092FFB3 /* Pods-RPChatUI_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RPChatUI_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3AB047C5B1B917AFE17F053766CB1CF7 /* ChatInputView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
-		41AB8972A00D7B229086301F0D1A3A45 /* RPChat.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = RPChat.storyboard; sourceTree = "<group>"; };
+		41AB8972A00D7B229086301F0D1A3A45 /* RPChat.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; path = RPChat.storyboard; sourceTree = "<group>"; };
 		429F7536EBCBE1137FA6E0CB60D74757 /* Pods-RPChatUI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RPChatUI_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4790855759D6DBBD6FB22B5CBA9F6943 /* ContactServicesTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContactServicesTableViewCell.swift; sourceTree = "<group>"; };
-		482A853E53D675F030C57762C975415B /* RPChatUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RPChatUI.modulemap; sourceTree = "<group>"; };
-		4F58DC489CC94240CE6D4DD4914D5D2C /* RPChatUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RPChatUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5878D233F43486A4684F2B11CABCE135 /* Pods_RPChatUI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPChatUI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482A853E53D675F030C57762C975415B /* RPChatUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RPChatUI.modulemap; sourceTree = "<group>"; };
+		4F58DC489CC94240CE6D4DD4914D5D2C /* RPChatUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RPChatUI.framework; path = RPChatUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5878D233F43486A4684F2B11CABCE135 /* Pods_RPChatUI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RPChatUI_Tests.framework; path = "Pods-RPChatUI_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C0A0EF9601FC1C9AF4414A97AC35C8 /* Pods-RPChatUI_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RPChatUI_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		6437E24E9BDD330D43F84994CC2BAC57 /* RPChatUI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RPChatUI.xcconfig; sourceTree = "<group>"; };
 		69EB86795B9B969CD61A871275C2E710 /* CardillustrationTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CardillustrationTableViewCell.swift; sourceTree = "<group>"; };
@@ -91,15 +93,15 @@
 		6F7FAA1EBA16787B95BFA0BB5251362B /* Pods-RPChatUI_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RPChatUI_Example-frameworks.sh"; sourceTree = "<group>"; };
 		7B070219EF19C19B5E18F1CF4BE2F7C8 /* TimeSlotTubeTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSlotTubeTableViewCell.swift; sourceTree = "<group>"; };
 		7B4CF367A28841A23A0F951A51252A77 /* Pods-RPChatUI_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RPChatUI_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7B59B09CBF4A33AF249F16A0CF648014 /* RPChatUI.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPChatUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B59B09CBF4A33AF249F16A0CF648014 /* RPChatUI.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RPChatUI.bundle; path = RPChatUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9DDC7F5E6CB93A65CFC63848D5F2E2 /* OptionCardsTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionCardsTableViewCell.swift; sourceTree = "<group>"; };
 		84B2A9C17446E0D1638552A16E4B6AE1 /* Pods-RPChatUI_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RPChatUI_Tests-resources.sh"; sourceTree = "<group>"; };
 		899F55FB36FFA28163270F9201B34101 /* Pods-RPChatUI_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RPChatUI_Example-dummy.m"; sourceTree = "<group>"; };
-		8F19660155901E05F3ABBC3A955D9009 /* Pods-RPChatUI_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RPChatUI_Example.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8F19660155901E05F3ABBC3A955D9009 /* Pods-RPChatUI_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RPChatUI_Example.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98A5E24E80B790EA8CCD17C37912CAD1 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		9FB1289D32A2E34B0005105A5E4E87E4 /* TimeTabletCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeTabletCollectionViewCell.swift; sourceTree = "<group>"; };
-		A1B5ADE8B9D835ECFFA19C360996343A /* Pods_RPChatUI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPChatUI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B5ADE8B9D835ECFFA19C360996343A /* Pods_RPChatUI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RPChatUI_Example.framework; path = "Pods-RPChatUI_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95C7610E6D8C4F4FBD4234FE855D549 /* TimeSlotTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSlotTableViewCell.swift; sourceTree = "<group>"; };
 		AA3A59C3A78ED66A4D7C650AD9675735 /* ChatMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		B3311A4C54785FA3C745CB54602D2B71 /* Pods-RPChatUI_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RPChatUI_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 		DA9EB63F7B3E957F3B617B980E8ABDB3 /* Pods-RPChatUI_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RPChatUI_Tests-dummy.m"; sourceTree = "<group>"; };
 		E02F763D6A07B1B3D88D2C02E20A820E /* Pods-RPChatUI_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RPChatUI_Example-resources.sh"; sourceTree = "<group>"; };
 		E24506DEF08ABC2BF46B5CF57AD9330F /* FlexiTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlexiTextView.swift; sourceTree = "<group>"; };
-		E50F4A4FA2C4D13B3982EC8043FF293D /* Pods-RPChatUI_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RPChatUI_Tests.modulemap"; sourceTree = "<group>"; };
+		E50F4A4FA2C4D13B3982EC8043FF293D /* Pods-RPChatUI_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RPChatUI_Tests.modulemap"; sourceTree = "<group>"; };
 		E6B2DA0A6FC973BDDA47C9542A711F7F /* RPBundle.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = RPBundle.bundle; sourceTree = "<group>"; };
 		EB3C67E51CE2EEA11BEC28FB21EE54A6 /* ContactAddressTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContactAddressTableViewCell.swift; sourceTree = "<group>"; };
 		ED564074B76E244AAF9421E5FC101C7D /* Pods-RPChatUI_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RPChatUI_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -158,12 +160,12 @@
 		00D9B9251583A062FF889FD5E176E3DB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BC27AFDE73ABD92AC22E9E305B675F71 /* ChatViewController.swift */,
 				69EB86795B9B969CD61A871275C2E710 /* CardillustrationTableViewCell.swift */,
 				3175C558405C0BF2F6A9F65BAE7CAF8C /* CardillustrationViewController.swift */,
 				3AB047C5B1B917AFE17F053766CB1CF7 /* ChatInputView.swift */,
 				AA3A59C3A78ED66A4D7C650AD9675735 /* ChatMessage.swift */,
 				12B8785BB7B41DD2108143075C70F671 /* ChatMessageCell.swift */,
+				BC27AFDE73ABD92AC22E9E305B675F71 /* ChatViewController.swift */,
 				EB3C67E51CE2EEA11BEC28FB21EE54A6 /* ContactAddressTableViewCell.swift */,
 				2B8865C6CF767590B9126DB766EF087D /* ContactCardTableViewCell.swift */,
 				05C7C8EB478FB05A725E0552CA0D5CA4 /* ContactDetailsViewController.swift */,
@@ -181,6 +183,7 @@
 				7B070219EF19C19B5E18F1CF4BE2F7C8 /* TimeSlotTubeTableViewCell.swift */,
 				9FB1289D32A2E34B0005105A5E4E87E4 /* TimeTabletCollectionViewCell.swift */,
 			);
+			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -227,6 +230,7 @@
 			children = (
 				DEAC0C10D5E8DA826140C38F8DAF974A /* Assets */,
 			);
+			name = RPChatUI;
 			path = RPChatUI;
 			sourceTree = "<group>";
 		};
@@ -306,6 +310,7 @@
 			children = (
 				00D9B9251583A062FF889FD5E176E3DB /* Classes */,
 			);
+			name = RPChatUI;
 			path = RPChatUI;
 			sourceTree = "<group>";
 		};
@@ -331,6 +336,7 @@
 				E6B2DA0A6FC973BDDA47C9542A711F7F /* RPBundle.bundle */,
 				41AB8972A00D7B229086301F0D1A3A45 /* RPChat.storyboard */,
 			);
+			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -387,7 +393,7 @@
 			buildPhases = (
 				8E71DBFD8E50F10E2136B68524D8FD31 /* Sources */,
 				59F5AB8FD09CC85383670037AC7319C1 /* Frameworks */,
-				51E97E61948D27CF9D5A86A74A698A92 /* Resources */,
+				2CF201E9AC022AA974FB436AFE6FD2C7 /* Resources */,
 				EE803D97F8C0D23F4FA44DFF36920CE8 /* Headers */,
 			);
 			buildRules = (
@@ -465,11 +471,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		51E97E61948D27CF9D5A86A74A698A92 /* Resources */ = {
+		2CF201E9AC022AA974FB436AFE6FD2C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE0E083C47AA93C0A2645134211260A2 /* RPChatUI.bundle in Resources */,
+				6F47427E0635A04AF6593373545D139C /* RPBundle.bundle in Resources */,
+				47CD9775EF7EA16683826747F408D6B9 /* RPChat.storyboard in Resources */,
+				BF4E6B868156CBD97F0185276F686E71 /* RPChatUI.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
